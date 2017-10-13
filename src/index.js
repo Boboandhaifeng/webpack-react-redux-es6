@@ -16,14 +16,3 @@ const App = () => (
 );
 
 render(<App />, document.getElementById('root'));
-
-// function component() {
-//     var element = document.createElement('div');
-//     element.innerHTML = 'Hello webpack!!!';
-
-//     return element;
-//   }
-//   // if (module.hot) {  
-//   //   module.hot.accept();
-//   //  }
-// document.body.appendChild(component());

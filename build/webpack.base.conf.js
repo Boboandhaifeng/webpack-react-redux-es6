@@ -27,19 +27,10 @@ module.exports = {
         chunkFilename: '[name].js'
     }, 
     resolve: {
-        extensions: ['.js', '.jsx', '.less', '.scss', '.css'],
-        // modules: [
-        //     path.resolve(__dirname, 'node_modules'),
-        //     path.join(__dirname, './src')
-        // ]
-        // ,
-        // alias: {
-        //     "actions": path.resolve(__dirname, "src/actions"),
-        //     "components": path.resolve(__dirname, "src/components"),
-        //     "containers": path.resolve(__dirname, "src/containers"),
-        //     "reducers": path.resolve(__dirname, "src/reducers"),
-        //     "utils": path.resolve(__dirname, "src/utils")
-        // }
+        modules: [
+            path.join(__dirname, '../src'),
+            'node_modules'
+        ]
     },
     module: {
         rules: [

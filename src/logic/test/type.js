@@ -1,0 +1,1 @@
+export const CUR_SYS_OPT = 'CUR_SYS_OPT';

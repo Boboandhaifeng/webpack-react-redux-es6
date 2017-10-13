@@ -5,54 +5,10 @@ import {
   Link
 } from 'react-router-dom'
 
+import {Test} from 'pages';
+
 import { Layout, Menu, Icon } from 'antd';
 const { Header, Sider, Content } = Layout;
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-)
-
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-)
-
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
-)
-
-const Topics = ({ match }) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>
-          Rendering with React
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>
-          Components
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>
-          Props v. State
-        </Link>
-      </li>
-    </ul>
-
-    <Route path={`${match.url}/:topicId`} component={Topic}/>
-    <Route exact path={match.url} render={() => (
-      <h3>Please select a topic.</h3>
-    )}/>
-  </div>
-)
 
 class SiderLayout extends React.Component {
     state = {
@@ -94,9 +50,9 @@ class SiderLayout extends React.Component {
                             />
                         </Header>
                         <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-                            <Route exact path="/" component={Home}/>
-                            <Route path="/about" component={About}/>
-                            <Route path="/topics" component={Topics}/>
+                            <Route exact path="/" component={Test.Home}/>
+                            <Route path="/about" component={Test.About}/>
+                            <Route path="/topics" component={Test.Topics}/>
                         </Content>
                     </Layout>
                 </Layout>
