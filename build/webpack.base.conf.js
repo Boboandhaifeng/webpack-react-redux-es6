@@ -2,7 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-console.log(path.join(__dirname, './index.html'))
+const os = require('os');
+const HappyPack  = require('happypack');
+const happThreadPool = HappyPack.ThreadPool({size: os.cpus().length}); // 采用多进程，进程数由CPU核数决定
 
 module.exports = {
     entry: {
@@ -45,6 +47,16 @@ module.exports = {
         }]
     },
     plugins: [
+        new HappyPack({
+            id: 'js',
+            cache: true,
+            loaders: ['babel-loader?cacheDirectory=true'],
+            threadPool: happThreadPool,
+        }),
+        // new webpack.DllReferencePlugin({
+        //     context: __dirname,
+        //     manifest: require('../manifest.json'),
+        // }),
         new HtmlWebpackPlugin({
             title: '统一运维管理',
             filename: 'index.html',

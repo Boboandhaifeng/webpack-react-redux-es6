@@ -8,6 +8,8 @@
 * 因为引入了ant组件库，适合想要重构公司内部管理系统的开发者。
 * 使用的webpack-dev-middleware和webpack-hot-middleware进行热更新 且开发环境生产环境分别配置，适合想要把玩webpack的开发者。
 
+### 更新
+1. 打包优化 HappyPack。[2017/10/18]
 ### Installation 教程
 fork到你的账号，或者 download 项目到本地
 
@@ -46,3 +48,4 @@ fork到你的账号，或者 download 项目到本地
 |   ├─webpack.base.conf.js
 |   ├─webpack.dev.conf.js
 |   └webpack.prod.conf.js
+
