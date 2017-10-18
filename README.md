@@ -1,6 +1,6 @@
 
 ***
-# 热更新、ES6/7、LESS、Router4.x、redux、webpack3.x、antd
+# 热更新、ES6/7、LESS、Router4.x、redux、webpack3.x、antd、code splitting
 ## 简介
 **此脚手架集成了react开发常用技术栈，且其中的webpack、router、browser-sync等(工具库插件)基本为目前(2017/10/17)最新版本。**
 ### 适用人群
