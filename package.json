@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "antd": "^2.13.6",
+    "bundle-loader": "^0.5.5",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",

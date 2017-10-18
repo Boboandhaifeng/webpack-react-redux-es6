@@ -53,4 +53,4 @@ const mapActionToProps = (dispatch) => ({
     actions: bindActionCreators(testActions, dispatch)
 });
 
-export const Topics = connect(mapStateToProps, mapActionToProps)(_Topics);
+export default connect(mapStateToProps, mapActionToProps)(_Topics);

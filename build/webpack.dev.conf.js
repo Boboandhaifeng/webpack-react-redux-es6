@@ -10,7 +10,7 @@ config.entry.app.unshift(
     'webpack/hot/only-dev-server'
 )
 
-config.devtool = 'inline-source-map';
+config.devtool = 'source-map';
 config.output.publicPath = '/';
 
 config.module.rules.push({

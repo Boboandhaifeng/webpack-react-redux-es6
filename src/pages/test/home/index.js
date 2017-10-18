@@ -15,6 +15,7 @@ export class _Home extends Component {
         return (
             <div className='page biz-monitor'>
                 <p>{curSysOpt}</p>
+                <p>111</p>
             </div>
         );
     }
@@ -28,4 +29,4 @@ const mapActionToProps = (dispatch) => ({
     actions: bindActionCreators(testActions, dispatch)
 });
 
-export const Home = connect(mapStateToProps, mapActionToProps)(_Home);
+export default  connect(mapStateToProps, mapActionToProps)(_Home);
