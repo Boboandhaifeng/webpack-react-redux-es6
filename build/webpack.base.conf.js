@@ -23,16 +23,21 @@ module.exports = {
           ]
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].bundle.[hash:8].js',
         path: path.resolve(__dirname, '../dist/asset'),
         publicPath: '/asset/',
-        chunkFilename: '[name].js'
+        chunkFilename: '[name].[chunkhash:8].js'
     }, 
     resolve: {
+        extensions: ['.js', '.jsx', '.less', '.scss', '.css'],
         modules: [
             path.join(__dirname, '../src'),
             'node_modules'
-        ]
+        ],
+        alias: {
+            "components": path.resolve(__dirname, "../src/components"),
+            "utils": path.resolve(__dirname, "../src/utils")
+        }
     },
     module: {
         rules: [
