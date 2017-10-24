@@ -1,6 +1,3 @@
-/**
- * Created by yongyuehuang on 2017/8/22.
- */
 var webpack = require('webpack')
 var express = require('express')
 var app = express();

@@ -63,7 +63,7 @@ module.exports = {
         //     manifest: require('../manifest.json'),
         // }),
         new HtmlWebpackPlugin({
-            title: '统一运维管理',
+            title: 'React Demo',
             filename: 'index.html',
             template: path.join(__dirname, '../index.html'),
             hash: true
