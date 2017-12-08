@@ -1,0 +1,13 @@
+{
+  "code": 0,
+  "message": "",
+  "data": {
+    "masterName": "aaa",
+    "masterAvatar": "",
+    "slaveName": "bbb",
+    "slaveAvatar": "",
+    "connectionId": 123,
+    "monthCardTime": 4,
+    "currentUserStatus": 3
+  }
+}

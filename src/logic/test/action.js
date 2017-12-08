@@ -1,14 +1,22 @@
 import * as types from './type';
-import axios from 'axios';
+import axios from 'utils/axios';
 
 const curSysOptA = (data) => ({
     type: types.CUR_SYS_OPT,
     data: data
 });
 
-//  改变当前应用
+// export const curSysOptF = () => {
+//     return (dispatch, getState) => {
+//         dispatch(curSysOptA("home222"));
+//     };
+// };
+
 export const curSysOptF = () => {
     return (dispatch, getState) => {
-        dispatch(curSysOptA("home222"));
-    };
-};
+        return axios.post(`/login.do`, {}).then(res => {
+            console.log(res)
+            dispatch(curSysOptA("home222"));
+        });
+    }
+}
