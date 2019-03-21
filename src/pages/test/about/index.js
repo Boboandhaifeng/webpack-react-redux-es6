@@ -4,21 +4,21 @@ import { bindActionCreators } from 'redux';
 import * as testActions from 'logic/test/action.js';
 
 export class _About extends Component {
-    render () {
-        return (
-            <div className='page biz-monitor'>
-                <p>about</p>
-            </div>
-        );
-    }
+  render () {
+    return (
+      <div className='page biz-monitor'>
+        <p>about</p>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state) => ({
-    test: state.Test
+  test: state.Test
 });
 
 const mapActionToProps = (dispatch) => ({
-    actions: bindActionCreators(testActions, dispatch)
+  actions: bindActionCreators(testActions, dispatch)
 });
 
 export default connect(mapStateToProps, mapActionToProps)(_About);

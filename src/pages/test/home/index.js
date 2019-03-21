@@ -4,29 +4,29 @@ import { bindActionCreators } from 'redux';
 import * as testActions from 'logic/test/action.js';
 
 export class _Home extends Component {
-    componentDidMount() {
-        const { curSysOptF } = this.props.actions;
-        console.log(this);
+  componentDidMount() {
+    const { curSysOptF } = this.props.actions;
+    console.log(this);
 
-        setTimeout(() => curSysOptF(), 2000)
-    }
-    render () {
-        const { curSysOpt="" } = this.props.test;
-        return (
-            <div className='page biz-monitor'>
-                <p>{curSysOpt}</p>
-                <p>111</p>
-            </div>
-        );
-    }
+    setTimeout(() => curSysOptF(), 2000)
+  }
+  render () {
+    const { curSysOpt="" } = this.props.test;
+    return (
+      <div className='page biz-monitor'>
+        <p>{curSysOpt}</p>
+        <p>111</p>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state) => ({
-    test: state.Test
+  test: state.Test
 });
 
 const mapActionToProps = (dispatch) => ({
-    actions: bindActionCreators(testActions, dispatch)
+  actions: bindActionCreators(testActions, dispatch)
 });
 
 export default  connect(mapStateToProps, mapActionToProps)(_Home);

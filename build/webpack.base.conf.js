@@ -45,7 +45,17 @@ module.exports = {
             test: /\.jsx?$/,
             exclude: /(node_modules|bower_components)/,
             use: 'babel-loader'
-        }, 
+        }, {
+            test: /\.js$/,
+            loader: 'eslint-loader',
+            enforce: "pre",
+            include: [path.resolve(__dirname, 'src')], // 指定检查的目录
+            options: { // 这里的配置项参数将会被传递到 eslint 的 CLIEngine 
+                cache: true,
+                emitWarning:true,
+                formatter: require('eslint-friendly-formatter') // 指定错误报告的格式规范
+            }
+        },
         {
             test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
             use: ['file-loader?limit=1000&name=files/[md5:hash:base64:10].[ext]']

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development node build/dev.js",
     "build": "cross-env NODE_ENV=production node build/prod.js",
-    "dll": "webpack --progress --profile --config build/webpack.dll.conf.js"
+    "lint": "eslint --ext .jsx,.js src/  --fix ./src --cache",
+    "dll": "webpack --progress --profile --config build/webpack.dll.conf.js",
+    "lint:watch": "npm run lint --watch"
   },
   "author": "baozhiwen",
   "license": "ISC",
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-import": "^1.6.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -38,8 +41,13 @@
     "browser-sync-webpack-plugin": "^1.2.0",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.1.1",
-    "cross-env": "^5.0.5",
+    "cross-env": "^5.2.0",
     "css-loader": "^0.28.7",
+    "eslint": "^5.15.3",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-react": "^7.12.4",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.1",

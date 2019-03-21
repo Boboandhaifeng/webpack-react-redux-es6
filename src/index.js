@@ -10,9 +10,9 @@ import "./style.css";
 import { Menu, Icon, Button } from 'antd';
 
 const App = () => (
-    <Provider store={store}>
-        <Routes />
-    </Provider>
+  <Provider store={store}>
+    <Routes />
+  </Provider>
 );
 
 render(<App />, document.getElementById('root'));
