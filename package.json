@@ -10,6 +10,9 @@
     "dll": "webpack --progress --profile --config build/webpack.dll.conf.js",
     "lint:watch": "npm run lint --watch"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "author": "baozhiwen",
   "license": "ISC",
   "dependencies": {
@@ -55,6 +58,7 @@
     "html-webpack-plugin": "^2.30.1",
     "less": "^2.3.1",
     "less-loader": "^4.0.5",
+    "pre-commit": "^1.2.2",
     "react-tools": "^0.13.3",
     "react-transform": "^0.0.3",
     "react-transform-hmr": "^1.0.4",
